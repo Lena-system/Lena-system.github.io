@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое портфолио</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Иконки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #70d6ff;
+            --secondary-color: #ff70a6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+        }
+        .project-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        .skill-badge {
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 5px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Мое портфолио</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Обо мне</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Проекты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <section class="hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Привет, я Елена</h1>
+            <p class="lead">Начинающий frontend-разработчик</p>
+            <a href="#projects" class="btn btn-light btn-lg mt-3">Мои проекты</a>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Обо мне</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Образование</h3>
+                    <p>Студент МАИ, "Системный анализ и управление". Изучаю frontend-разработку самостоятельно и на курсах.</p>
+                    
+                    <h3 class="mt-4">Цели</h3>
+                    <p>Хочу стать профессиональным frontend-разработчиком, участвовать в интересных проектах и постоянно развивать свои навыки.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Навыки</h3>
+                    <div>
+                        <span class="skill-badge"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-badge"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-badge"><i class="fab fa-git"></i> Git</span>
+                        <span class="skill-badge"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                    </div>
+                    
+                    <h3 class="mt-4">Изучаю сейчас</h3>
+                    <div class="alert alert-info">
+                        <i class="fas fa-graduation-cap"></i> Курс: Профессия «Фронтенд-разработчик #1» от HTML Academy
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Мои проекты</h2>
+            <div class="row">
+                <!-- Проект 1 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://aftershock.news/sites/default/files/u30202/teasers/1646122819_5-kartinkin-net-p-kartinki-shesterenki-5.png" class="card-img-top" alt="Quiz App">
+                        <div class="card-body">
+                            <h5 class="card-title">Интерактивный Quiz</h5>
+                            <p class="card-text">Приложение-тест с таймером и динамической генерацией вопросов.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary">JavaScript</span>
+                                <span class="badge bg-secondary">CSS3</span>
+                            </div>
+                            <div class="accordion" id="quizAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#quizDetails">
+                                            Этапы разработки
+                                        </button>
+                                    </h2>
+                                    <div id="quizDetails" class="accordion-collapse collapse" data-bs-parent="#quizAccordion">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Верстка интерфейса</li>
+                                                <li>Реализация таймера</li>
+                                                <li>Добавление логики вопросов</li>
+                                                <li>Валидация ответов</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://github.com/Lena-system/js-quiz-app " class="btn btn-primary mt-3" target="_blank">
+                                <i class="fab fa-github"></i> Код на GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Проект 2 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://aftershock.news/sites/default/files/u30202/teasers/1646122819_5-kartinkin-net-p-kartinki-shesterenki-5.png" class="card-img-top" alt="News Parser">
+                        <div class="card-body">
+                            <h5 class="card-title">Парсер новостей</h5>
+                            <p class="card-text">Скрипт для сбора новостей с сайтов и сохранения в CSV.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-secondary">BeautifulSoup</span>
+                            </div>
+                            <div class="accordion" id="parserAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parserDetails">
+                                            Этапы разработки
+                                        </button>
+                                    </h2>
+                                    <div id="parserDetails" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Анализ структуры сайта</li>
+                                                <li>Написание парсера</li>
+                                                <li>Сохранение в CSV</li>
+                                                <li>Оптимизация скорости</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://github.com/Lena-system/news-parser-python" class="btn btn-primary mt-3" target="_blank">
+                                <i class="fab fa-github"></i> Код на GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Проект 3 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://aftershock.news/sites/default/files/u30202/teasers/1646122819_5-kartinkin-net-p-kartinki-shesterenki-5.png" class="card-img-top" alt="Landing Page">
+                        <div class="card-body">
+                            <h5 class="card-title">Лендинг курса</h5>
+                            <p class="card-text">Адаптивный лендинг с микро-анимациями.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary">HTML5</span>
+                                <span class="badge bg-secondary">CSS3</span>
+                            </div>
+                            <div class="accordion" id="landingAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#landingDetails">
+                                            Этапы разработки
+                                        </button>
+                                    </h2>
+                                    <div id="landingDetails" class="accordion-collapse collapse" data-bs-parent="#landingAccordion">
+                                        <div class="accordion-body">
+                                            <ol>
+                                                <li>Проектирование макета</li>
+                                                <li>Адаптивная верстка</li>
+                                                <li>Добавление анимаций</li>
+                                                <li>Оптимизация для мобильных</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://github.com/Lena-system/course" class="btn btn-primary mt-3" target="_blank">
+                                <i class="fab fa-github"></i> Код на GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Контакты</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <p>Свяжитесь со мной для сотрудничества или просто поздоровайтесь!</p>
+                    <div class="mt-4">
+                        <a href="vlena.lena@yadex.ru" class="btn btn-outline-primary me-2">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                        <a href="https://github.com/Lena-system" class="btn btn-outline-dark" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+   			<a href="https://github.com/Lena-system/rezume" class="btn btn-outline-dark" target="_blank">
+                            <i class="fab fa-rezume"></i> Rezume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2025 Мое портфолио. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
